@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!--Let browser know website is optimized for mobile-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro</title>
+</head>
+<body>
+  <h2>Registro de Visita</h2>
+  <form action="#" method="POST">
+    <label for="email">Correo electrónico:</label><br>
+    <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@aragon\.unam\.mx$" placeholder="example@aragon.unam.mx" required><br><br>
+
+    <label for="fecha">Fecha de Nacimiento (DD/MM/AAAA):</label><br>
+    <input type="text" id="fecha" name="fecha" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}" placeholder="DD/MM/AAAA" required><br><br>
+
+    <label for="numCuenta">Numero de cuenta (sin guiones)</label><br>
+    <input type="text" id="numCuenta" name="numCuenta" pattern="^\d{9}$" placeholder="XXXXXXXXX" required><br><br>
+
+    <label for="semestre">Semestre:</label><br>
+    <input type="number" id="semestre" name="semestre" pattern="[1-9]" min="1" max="9" placeholder="Ejemplo: 7" required><br><br>
+
+    <label for="edad">Edad:</label><br>
+    <input type="number" id="edad" name="edad" min="17" max="99" required><br><br>
+
+    <button class="btn waves-effect blue darken-4" type="submit" name="action">ENVIAR<i class="material-icons right">send</i></button>
+
+  </form>
+
+  <div class="row center">
+    <a href="index.html" id="download-button" class="btn-large waves-effect waves-light orange">INICIO</a>
+  </div>
+
+
+
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
