@@ -1,0 +1,111 @@
+/* Ajustes generales */
+
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1 0 auto; 
+}
+
+
+.nav-wrapper {
+    padding: 0 20px;
+}
+
+/* Título central */
+.header.center {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* Botón de Registro de Visita */
+#download-button {
+    font-size: 1.25rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#download-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 167, 38, 0.5);
+}
+
+/* Tarjetas de Planes */
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card-action a {
+    font-weight: bold;
+    color: #ffab40;
+}
+
+/* Iconos de sección informativa */
+.icon-block h2 {
+    font-size: 2.5rem;
+}
+
+.icon-block h5 {
+    font-weight: bold;
+}
+
+.icon-block p {
+    font-size: 1.05rem;
+}
+
+/* Footer */
+.page-footer {
+    flex-shrink: 0; 
+}
+
+.page-footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.page-footer h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.page-footer p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.page-footer ul li a {
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.page-footer ul li a:hover {
+    color: #ffab40;
+}
+
+.page-footer ul li img {
+    width: 24px;
+    margin-right: 8px;
+}
+
+.footer-copyright {
+    display: none;
+}
