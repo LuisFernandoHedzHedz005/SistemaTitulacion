@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+    <!-- Header (Adaptado del index) -->
+    <nav class="light-blue blue darken-4" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="index.html" class="brand-logo" style="display: flex; align-items: center;">
+                <img src="img/ico.jpg" alt="ICO logo" style="height: 58px; margin: 0 10px;">ICO
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li style="display: flex; align-items: center;">
+                    <img src="img/logo_fes.jpg" alt="Fes Aragon logo" style="height: 58px; margin-right: 10px;">
+                    <a href="https://www.aragon.unam.mx/fes-aragon/#!/inicio">FES Aragon UNAM</a>
+                </li>
+            </ul>
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+    <!-- Formulario -->
+    <div class="container" style="margin-top: 50px; max-width: 600px;">
+      <h5 class="center-align">Formulario de Registro</h5>
+      <form>
+          <div class="input-field">
+              <label for="first_name">Nombre</label>
+              <input id="first_name" type="text" class="validate">
+          </div>
+
+          <div class="input-field">
+              <label for="last_name_p">Apellido Paterno</label>
+              <input id="last_name_p" type="text" class="validate">
+          </div>
+
+          <div class="input-field">
+              <label for="last_name_m">Apellido Materno</label>
+              <input id="last_name_m" type="text" class="validate">
+          </div>
+
+          <div class="input-field">
+              <label for="registration_date">Fecha de Registro</label>
+              <input type="text" class="datepicker" id="registration_date" placeholder="Selecciona o ingresa la fecha">
+          </div>
+
+          <div class="input-field">
+              <select id="semester" class="browser-default">
+                  <option value="" disabled selected>Selecciona tu semestre</option>
+                  <option value="1">1°</option>
+                  <option value="2">2°</option>
+                  <option value="3">3°</option>
+                  <option value="4">4°</option>
+                  <option value="5">5°</option>
+                  <option value="6">6°</option>
+                  <option value="7">7°</option>
+                  <option value="8">8°</option>
+                  <option value="9">9°</option>
+              </select>
+          </div>
+
+          <div class="input-field">
+              <label for="age">Edad</label>
+              <input id="age" type="number" min="1" max="99" class="validate">
+          </div>
+
+          <div class="center-align">
+              <button class="btn waves-effect waves-light orange" type="submit" name="action">Enviar
+                  <i class="material-icons right">send</i>
+              </button>
+          </div>
+      </form>
+  </div>
+
+    <!-- Footer (Adaptado del index) -->
+    <footer class="page-footer blue darken-4">
+      <div class="container">
+          <div class="row">
+              <div class="col l6 s12">
+                  <h5 class="white-text">AVISO</h5>
+                  <p class="grey-text text-lighten-4" style="margin-bottom: 20px; text-align: justify;">
+                      Hecho por estudiantes de Universidad Nacional Autonoma de Mexico (UNAM) 2024. No se hace esta pagina con fines de lucro,
+                      solo llevar a la practica los conocimientos adquiridos durante la Carrera de Ingenieria en Computacion y como entregable para proyecto final.
+                      Si necesita mas detalles acerca de algo más, le pedimos que consulte la Pagina Oficial de la Facultad de Estudios Superiores Aragon u otras redes sociales.
+                      Pagina solo informativa
+                  </p>
+              </div>
+              
+              <div class="col l3 s12">
+                  <h5 class="white-text">Redes Oficiales</h5>
+                  <ul style="padding-left: 0; margin-left: 20px;"> <!-- Ajusta el margen izquierdo aquí -->
+                      <li style="margin-bottom: 10px;">
+                          <a class="white-text hoverable" href="https://www.aragon.unam.mx/fes-aragon/#!/inicio">
+                              <img src="img/home.png" alt="Pagina Oficial logo" style="vertical-align: middle; margin-right: 8px; width: 24px;">
+                              Página Oficial
+                          </a>
+                      </li>
+                      <li style="margin-bottom: 10px;">
+                          <a class="white-text hoverable" href="https://www.facebook.com/FESAragonUNAM/">
+                              <img src="img/fb.png" alt="Facebook logo" style="vertical-align: middle; margin-right: 8px; width: 24px;">
+                              Facebook
+                          </a>
+                      </li>
+                      <li style="margin-bottom: 10px;">
+                          <a class="white-text hoverable" href="https://x.com/fesaragonunam?lang=es">
+                              <img src="img/x.png" alt="X logo" style="vertical-align: middle; margin-right: 8px; width: 24px;">
+                              X
+                          </a>
+                      </li>
+                      <li style="margin-bottom: 10px;">
+                          <a class="white-text hoverable" href="https://www.instagram.com/fesaragonunam/?hl=es">
+                              <img src="img/ig.png" alt="Instagram logo" style="vertical-align: middle; margin-right: 8px; width: 24px;">
+                              Instagram
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.datepicker');
+
+          var currentYear = new Date().getFullYear();
+          M.Datepicker.init(elems, {
+              format: 'yyyy-mm-dd',
+              yearRange: [1900, currentYear] // Establece el rango de años
+          });
+          
+          var selects = document.querySelectorAll('select');
+          M.FormSelect.init(selects);
+      });
+  </script>
+</body>
+</html>
