@@ -9,7 +9,8 @@ html, body {
 }
 
 .container {
-    flex: 1 0 auto; 
+    flex: 1 0 auto;
+    
 }
 
 
@@ -108,4 +109,89 @@ html, body {
 
 .footer-copyright {
     display: none;
+}
+
+
+/*imagen parallax*/
+.parallax-container {
+    height: 400px; /* Ajusta la altura según necesites */
+}
+
+/*requisitos*/
+
+.row {
+    margin-top: 30px;
+}
+
+/* Reducir el ancho de la lista */
+.collection {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.collection.with-header .collection-header{
+    background-color: #0d47a1;
+}
+
+.collection.with-header {
+    background-color: #0d47a1; 
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    
+}
+
+/* Estilo para el encabezado de la lista */
+.collection-header {
+    background-color: #0d47a1;
+    padding: 15px;
+
+}
+
+/* Reducir el tamaño del texto en el header */
+.collection-header h4 {
+    /*
+    font-size: 25px;
+    margin-bottom: 10px;
+    */
+    color: #ffffff; /* Texto en blanco */
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Reducir el tamaño de los elementos de la lista */
+.collection-item {
+    /*
+    font-size: 15px;
+    padding: 5px 10px;
+    */
+    background-color: #0d47a1;   
+    color: black;
+    padding: 12px 20px;
+    font-size: 15px;
+}
+.col {
+    margin-bottom: 20px;
+}
+
+/*lista de modalidades*/
+.collection {
+    margin-top: 50px;
+}
+
+.collapsible {
+    margin: 0 auto;
+    width: 70%; 
+    max-width: 700px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.collapsible-body {
+    text-align: justify;
 }
