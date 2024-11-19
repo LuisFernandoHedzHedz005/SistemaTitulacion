@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h3>Estudiantes</h3>
+<% if (Array.isArray(estudiantes) && estudiantes.length > 0) { %>
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Numero de Cuenta</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Semestre</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% estudiantes.forEach(estudiante => { %>
+                <tr>
+                    <td><%= estudiante.numero_cuenta %></td>
+                    <td><%= estudiante.nombre %></td>
+                    <td><%= estudiante.apellido_paterno %></td>
+                    <td><%= estudiante.apellido_materno %></td>
+                    <td><%= estudiante.fecha_nacimiento %></td>
+                    <td><%= estudiante.semestre %></td>
+                    <td><%= estudiante.edad %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+<% } else { %>
+    <p>No hay estudiantes registrados</p>
+<% } %>
+
+<h3>Administradores</h3>
+    <% if (Array.isArray(administradores) && administradores.length > 0) { %>
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Contraseña</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% administradores.forEach(administrador => { %>
+                    <tr>
+                        <td><%= administrador.usuario %></td>
+                        <td><%= administrador.nombre %></td>
+                        <td><%= administrador.apellido_paterno %></td>
+                        <td><%= administrador.apellido_materno %></td>
+                        <td><%= administrador.contrasena %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No hay administradores registrados</p>
+    <% } %>
+
+    <!-- Tabla de Visitas -->
+    <h3>Visitas</h3>
+    <% if (Array.isArray(visitas) && visitas.length > 0) { %>
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>Id visita</th>
+                    <th>Número de cuenta</th>
+                    <th>Usuario</th>
+                    <th>Fecha de Visita</th>
+                    <th>Motivo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% visitas.forEach(visita => { %>
+                    <tr>
+                        <td><%= visita.id_visita %></td>
+                        <td><%= visita.numero_cuenta %></td>
+                        <td><%= visita.usuario %></td>
+                        <td><%= visita.fecha_visita %></td>
+                        <td><%= visita.motivo %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No hay visitas registradas</p>
+    <% } %>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

@@ -4,6 +4,8 @@ const indexRouter = require('./routes/index');
 const planesRouter = require('./routes/planes');
 const registroRouter = require('./routes/registro');
 const visitaRouter = require('./routes/visita');
+const adminRouter = require('./routes/admin');
+const consultasRouter = require('./routes/consultas');
 const queries = require('./config/querys');
 
 const app = express();
@@ -26,6 +28,8 @@ app.use('/', indexRouter);
 app.use('/planes', planesRouter);
 app.use('/registro', registroRouter);
 app.use('/visita', visitaRouter);
+app.use('/admin', adminRouter);
+app.use('/consultas', consultasRouter);
 
 
 app.post("/validar", async (req,res) => {
@@ -40,7 +44,8 @@ app.post("/validar", async (req,res) => {
 
         try {
             await queries.registrarUsuario(cuenta, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, semestre, edad);
-            res.send('Datos registrados correctamente');
+            //res.send('Datos registrados correctamente');
+            res.redirect('/');
         } catch (error) {
             console.error(error);
             res.status(500).send('Error al registrar los datos');
@@ -58,13 +63,35 @@ app.post("/validarVisita", async (req, res) => {
         }
 
         await queries.registrarVisita(cuenta, fecha_visita, motivo);
-        res.send('Visita registrada correctamente');
+        //res.send('Visita registrada correctamente');
+        res.redirect('/');
     } catch (error) {
         console.error(error);
         res.status(500).send('Error al registrar la visita');
     }
 });
 
+app.post("/validarAdmin", async (req, res) => {
+    console.log('Datos recibidos en /validarAdmin:', req.body);
+    const { usuario, contrasena, fecha_visita, motivo} = req.body;
+
+    try {
+        const adminValido = await queries.verificarContrasenaAdmin(usuario, contrasena);
+
+        if (!adminValido) {
+            return res.status(400).send('Error: Usuario o contraseña incorrectos');
+        }
+
+        await queries.registrarVisitaAdmin(usuario, fecha_visita, motivo);
+        res.redirect('/consultas'); 
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error al validar al administrador');
+    }
+});
+
+
+module.exports = consultasRouter;
 
 app.listen(port, () => {
     console.log(`Servidor escuchando en el puerto http://localhost:${port}`);
