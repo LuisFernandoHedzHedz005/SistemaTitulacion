@@ -5,13 +5,12 @@ const pool = mysql.createPool({
     user: 'root',
     password: '123456',
     database: 'registroestudiante',
-    multipleStatements: true, // Permitir múltiples sentencias en una consulta
+    multipleStatements: true, 
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
 });
 
-// Mantenemos la función query para compatibilidad con el código existente
 const query = async (sql, params) => {
     try {
         const [results] = await pool.execute(sql, params);
@@ -22,19 +21,7 @@ const query = async (sql, params) => {
     }
 };
 
-/*
-(async () => {
-    try {
-        const [rows] = await pool.query('SELECT * FROM Estudiantes');
-        console.log('Resultados:', rows);
-        console.log('¿Es array?', Array.isArray(rows));
-    } catch (error) {
-        console.error('Error al ejecutar la consulta:', error);
-    }
-})();
-
-*/
 module.exports = {
     query,
-    pool  // Exportamos también el pool por si necesitas acceso directo
+    pool 
 };

@@ -44,7 +44,6 @@ app.post("/validar", async (req,res) => {
 
         try {
             await queries.registrarUsuario(cuenta, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, semestre, edad);
-            //res.send('Datos registrados correctamente');
             res.redirect('/');
         } catch (error) {
             console.error(error);
@@ -63,7 +62,6 @@ app.post("/validarVisita", async (req, res) => {
         }
 
         await queries.registrarVisita(cuenta, fecha_visita, motivo);
-        //res.send('Visita registrada correctamente');
         res.redirect('/');
     } catch (error) {
         console.error(error);
