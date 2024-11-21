@@ -13,20 +13,27 @@ CREATE TABLE Estudiantes (
 );
 
 CREATE TABLE Administradores (
-    id_administrador INT PRIMARY KEY,
+    usuario INT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     apellido_paterno VARCHAR(100) NOT NULL,
     apellido_materno VARCHAR(100),
-    usuario VARCHAR(50) UNIQUE NOT NULL,
     contrasena VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Visitas (
     id_visita INT AUTO_INCREMENT PRIMARY KEY,
     numero_cuenta INT,
-    id_administrador INT,
+    usuario INT,
     fecha_visita DATE NOT NULL,
     motivo VARCHAR(255),
     FOREIGN KEY (numero_cuenta) REFERENCES Estudiantes(numero_cuenta),
-    FOREIGN KEY (id_administrador) REFERENCES Administradores(id_administrador)
+    FOREIGN KEY (usuario) REFERENCES Administradores(usuario)
 );
+
+
+INSERT INTO Estudiantes VALUES(319028005, "Luis", "Hernandez", "Hernandez", "2003-06-19", 5, 21)
+INSERT INTO Estudiantes VALUES(319028006, "Miguel", "López", "Roedea", "2003-06-19", 5, 22)
+INSERT INTO Estudiantes VALUES(319028007, "Feria", "Cantu", "Encarnacion", "2003-06-19", 5, 23)
+INSERT INTO administradores VALUES (319028005, "Aaron", "Lopez", "Olmos", "123456")
+INSERT INTO administradores VALUES (319028006, "Gael", "Padilla", "Rojas", "1234567")
+INSERT INTO administradores VALUES (319028007, "Tomas", "Chagoya", "Turip", "1234568")
