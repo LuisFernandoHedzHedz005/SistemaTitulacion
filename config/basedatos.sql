@@ -30,10 +30,3 @@ CREATE TABLE Visitas (
     FOREIGN KEY (usuario) REFERENCES Administradores(usuario)
 );
 
-
-INSERT INTO Estudiantes VALUES(319028005, "Luis", "Hernandez", "Hernandez", "2003-06-19", 5, 21)
-INSERT INTO Estudiantes VALUES(319028006, "Miguel", "López", "Roedea", "2003-06-19", 5, 22)
-INSERT INTO Estudiantes VALUES(319028007, "Feria", "Cantu", "Encarnacion", "2003-06-19", 5, 23)
-INSERT INTO administradores VALUES (319028005, "Aaron", "Lopez", "Olmos", "123456")
-INSERT INTO administradores VALUES (319028006, "Gael", "Padilla", "Rojas", "1234567")
-INSERT INTO administradores VALUES (319028007, "Tomas", "Chagoya", "Turip", "1234568")
