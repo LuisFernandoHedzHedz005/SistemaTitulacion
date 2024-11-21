@@ -91,6 +91,6 @@ app.post("/validarAdmin", async (req, res) => {
 
 module.exports = consultasRouter;
 
-app.listen(port, () => {
-    console.log(`Servidor escuchando en el puerto http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Servidor escuchando en el puerto http://192.168.3.15:${port}`);
 });
